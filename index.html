@@ -1,60 +1,162 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>JV Consultoria — Currículos Profissionais que Geram Contratações</title>
-  <meta name="description" content="Currículos estratégicos, modernos e personalizados. Entrega em 24h. Plano express (6h) disponível via PIX." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JV Consultoria - Currículos Profissionais</title>
+  <meta name="description" content="Currículos estratégicos e modernos, criados para gerar contratações reais. Entrega em até 24h — opção expressa em 6h disponível via PIX.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    :root{
-      --bg:#ffffff;
-      --text:#111111;
-      --muted:#6b6b6b;
-      --accent:#ffd700;
-      --accent-dark:#f0c800;
-      --blue:#0033cc;
-      --card:#ffffff;
-      --radius:12px;
-      --maxw:980px;
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    :root {
+      --primary: #ff7b00;
+      --secondary: #0055ff;
+      --bg: #f9fafb;
+      --text: #111;
+      --muted: #555;
+      --radius: 14px;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--text);
-      display:flex;
-      align-items:flex-start;
-      justify-content:center;
-      padding:36px 16px;
-      -webkit-font-smoothing:antialiased;
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-    .wrap{width:100%; max-width:var(--maxw)}
-    .card{
-      background:var(--card);
-      border-radius:var(--radius);
-      padding:28px;
-      box-shadow:0 8px 30px rgba(15,15,15,0.06);
-      border:1px solid rgba(10,10,10,0.03);
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 40px 16px;
     }
-    header{display:flex; align-items:center; gap:18px; margin-bottom:18px}
-    .logo{width:90px; height:90px; display:flex; align-items:center; justify-content:center; border-radius:12px; overflow:hidden; background:#fff}
-    .logo img{width:100%; height:100%; object-fit:contain; display:block}
-    .hero-text{flex:1}
-    h1{margin:0; font-size:22px; line-height:1.08; font-weight:700}
-    p.lead{margin:8px 0 0; color:var(--muted); font-size:15px; max-width:720px}
 
-    .grid{display:grid; grid-template-columns:1fr 360px; gap:22px; margin-top:18px; align-items:start}
-    @media (max-width:880px){ .grid{grid-template-columns:1fr} .aside{order:2} }
+    .container {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+      max-width: 680px;
+      width: 100%;
+      padding: 40px;
+      text-align: center;
+    }
 
-    .benefits{display:flex; flex-direction:column; gap:12px; margin-top:14px}
-    .benefit{display:flex; gap:12px; align-items:flex-start}
-    .bullet{width:10px; height:10px; border-radius:3px; background:var(--accent); margin-top:6px}
+    img.logo {
+      width: 160px;
+      margin-bottom: 24px;
+    }
 
-    .cta-box{padding:18px; border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,1), #fff); border:1px solid rgba(10,10,10,0.04)}
-    .price-row{display:flex; gap:12px; align-items:baseline; margin-top:8px}
-    .price{font-size:28px; font-weight:800}
-    .old-price{font-size:13px; color:var(--muted); text-decoration:line-through}
-    .sub{
+    h1 {
+      font-size: 1.9rem;
+      color: var(--secondary);
+      margin-bottom: 10px;
+    }
+
+    p.subtitle {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 30px;
+    }
+
+    .highlight {
+      background: var(--primary);
+      color: white;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
+    .pricing {
+      margin-top: 32px;
+      background: #f0f6ff;
+      border-radius: var(--radius);
+      padding: 24px;
+      text-align: center;
+    }
+
+    .pricing h2 {
+      font-size: 1.5rem;
+      color: var(--secondary);
+    }
+
+    .price {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 10px 0;
+    }
+
+    .pix {
+      background: var(--secondary);
+      color: white;
+      border: none;
+      padding: 14px 22px;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .pix:hover {
+      background: #003fcc;
+      transform: scale(1.03);
+    }
+
+    .express {
+      margin-top: 20px;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.85rem;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 28px 20px;
+      }
+      h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="LOGOTIPO JV.png" alt="Logo JV Consultoria" class="logo" />
+    <h1>Currículos Profissionais em até <span class="highlight">24 horas</span></h1>
+    <p class="subtitle">
+      Desenvolvidos com base em princípios de psicologia organizacional e marketing pessoal.<br>
+      Aumente suas chances reais de contratação com um currículo estratégico e visualmente atrativo.
+    </p>
+
+    <div class="pricing">
+      <h2>Plano Padrão</h2>
+      <div class="price">R$47</div>
+      <button class="pix" onclick="copyPix()">Copiar Chave PIX</button>
+      <p class="express">💡 Deseja receber em até <strong>6h?</strong><br>
+      Adicione <strong>+R$20</strong> ao PIX e informe “Entrega Expressa”.</p>
+    </div>
+
+    <footer>
+      Chave PIX (aleatória): <br>
+      <strong id="pix-key">365302f2-ca1f-4b35-842b-b4b5e49cd90c</strong><br><br>
+      © JV Consultoria — Resultados reais através da estratégia certa.
+    </footer>
+  </div>
+
+  <script>
+    function copyPix() {
+      const key = document.getElementById('pix-key').textContent;
+      navigator.clipboard.writeText(key);
+      alert("✅ Chave PIX copiada com sucesso!");
+    }
+  </script>
+</body>
+</html>
