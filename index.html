@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JV Consultoria — Currículos Profissionais que Geram Contratações</title>
+  <meta name="description" content="Currículos estratégicos, modernos e personalizados. Entrega em 24h. Plano express (6h) disponível via PIX." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111111;
+      --muted:#6b6b6b;
+      --accent:#ffd700;
+      --accent-dark:#f0c800;
+      --blue:#0033cc;
+      --card:#ffffff;
+      --radius:12px;
+      --maxw:980px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      padding:36px 16px;
+      -webkit-font-smoothing:antialiased;
+    }
+    .wrap{width:100%; max-width:var(--maxw)}
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:0 8px 30px rgba(15,15,15,0.06);
+      border:1px solid rgba(10,10,10,0.03);
+    }
+    header{display:flex; align-items:center; gap:18px; margin-bottom:18px}
+    .logo{width:90px; height:90px; display:flex; align-items:center; justify-content:center; border-radius:12px; overflow:hidden; background:#fff}
+    .logo img{width:100%; height:100%; object-fit:contain; display:block}
+    .hero-text{flex:1}
+    h1{margin:0; font-size:22px; line-height:1.08; font-weight:700}
+    p.lead{margin:8px 0 0; color:var(--muted); font-size:15px; max-width:720px}
+
+    .grid{display:grid; grid-template-columns:1fr 360px; gap:22px; margin-top:18px; align-items:start}
+    @media (max-width:880px){ .grid{grid-template-columns:1fr} .aside{order:2} }
+
+    .benefits{display:flex; flex-direction:column; gap:12px; margin-top:14px}
+    .benefit{display:flex; gap:12px; align-items:flex-start}
+    .bullet{width:10px; height:10px; border-radius:3px; background:var(--accent); margin-top:6px}
+
+    .cta-box{padding:18px; border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,1), #fff); border:1px solid rgba(10,10,10,0.04)}
+    .price-row{display:flex; gap:12px; align-items:baseline; margin-top:8px}
+    .price{font-size:28px; font-weight:800}
+    .old-price{font-size:13px; color:var(--muted); text-decoration:line-through}
+    .sub{
